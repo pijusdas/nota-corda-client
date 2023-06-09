@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link className=" hover:text-amber-600">Dashboard </Link>
             </div>
 
-            <Link className=" font-bold hover:text-amber-600">Login </Link>
+            <Link to={'/login'} className=" font-bold hover:text-amber-600">Login </Link>
             <div className="w-10 rounded-full">
                 <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
             </div>
