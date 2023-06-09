@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="navbar fixed z-10 bg-opacity-20 max-w-screen-xl bg-black text-white flex justify-between">
+        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white flex justify-between">
             <div className=''>
                 <Link className=" text-2xl font-bold"><span className="text-yellow-600">Nota</span><span className="text-red-800"> Corda</span></Link>
             </div>
