@@ -30,6 +30,25 @@ const ManageUsers = () => {
     }
  
 
+    const makeIntractor = (user)=>{
+        fetch(`http://localhost:5000/users/instractor/${user._id}`,{
+            method: 'PATCH'
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount){
+                refetch()
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${user.name} is Instractor now!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
+
     return (
         <div className=" w-full px-10 ">
             <div className="overflow-x-auto rounded-2xl shadow-2xl bg-slate-300 mx-5">
@@ -52,8 +71,8 @@ const ManageUsers = () => {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.role}</td>
-                                <td><button onClick={()=>makeAdmin(user)} className="btn btn-sm">Make Admin</button></td>
-                                <td><button className="btn btn-sm">Make Instractor</button></td>
+                                <td><button disabled={user.role ==='admin'} onClick={()=>makeAdmin(user)} className="btn btn-sm">Make Admin</button></td>
+                                <td><button disabled={user.role ==='instractor'} onClick={()=>makeIntractor(user)} className="btn btn-sm">Make Instractor</button></td>
                             </tr>)
                         }
                        

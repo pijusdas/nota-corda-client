@@ -7,6 +7,8 @@ import SignUp from "./Pages/Login/SignUp";
 import Login from "./Pages/SignIn/Login";
 import Dashboard from "./Dashboard/Dashboard";
 import ManageUsers from "./Dashboard/AdminRoutes/ManageUsers";
+import MangeClasses from "./Dashboard/AdminRoutes/MangeClasses";
+import AddClass from "./Dashboard/InstractorRoutes/AddClass";
 
 
   const router = createBrowserRouter([
@@ -35,6 +37,14 @@ import ManageUsers from "./Dashboard/AdminRoutes/ManageUsers";
             {
                 path: 'manageUser',
                 element: <ManageUsers></ManageUsers>
+            },
+            {
+                path:'manageClasses',
+                element: <MangeClasses></MangeClasses>
+            },
+            {
+                path: 'addClass',
+                element: <AddClass></AddClass>
             }
         ]
     }
