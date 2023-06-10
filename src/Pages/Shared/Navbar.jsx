@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
+    const { user ,logOut} = useContext(AuthContext)
+
+    console.log(user)
+    const handleLogout = ()=>{
+        logOut()
+        .then(()=>{})
+        .catch(error => console.log(error))
+    }
     return (
         <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white flex justify-between">
             <div className=''>
@@ -9,16 +19,21 @@ const Navbar = () => {
             </div>
 
             <div className=" space-x-3 font-bold">
-            <Link className=" hover:text-amber-600">home</Link>
-            <Link className=" hover:text-amber-600">Instractors</Link>
-            <Link className=" hover:text-amber-600">Classes</Link>
-            <Link className=" hover:text-amber-600">Dashboard </Link>
+                <Link className=" hover:text-amber-600">home</Link>
+                <Link className=" hover:text-amber-600">Instractors</Link>
+                <Link className=" hover:text-amber-600">Classes</Link>
+                <Link className=" hover:text-amber-600">Dashboard </Link>
             </div>
 
-            <Link to={'/login'} className=" font-bold hover:text-amber-600">Login </Link>
-            <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-            </div>
+            {user ? <div> <p onClick={handleLogout} className="mr-5 font-bold">Logout</p>
+                <div >
+                    <img className=" w-10 rounded-full" src={user?.photoURL}/>
+                </div>
+            </div> :
+
+                <Link to={'/login'} className=" font-bold hover:text-amber-600">Login </Link>
+            }
+
 
         </div>
     );
