@@ -22,7 +22,7 @@ const Navbar = () => {
                 <Link className=" hover:text-amber-600">home</Link>
                 <Link className=" hover:text-amber-600">Instractors</Link>
                 <Link className=" hover:text-amber-600">Classes</Link>
-                <Link className=" hover:text-amber-600">Dashboard </Link>
+                <Link to={'/dashboard'} className=" hover:text-amber-600">Dashboard </Link>
             </div>
 
             {user ? <div> <p onClick={handleLogout} className="mr-5 font-bold">Logout</p>

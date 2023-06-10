@@ -15,7 +15,7 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                const savedUser = { name: loggedUser.displayName, email: loggedUser.email }
+                const savedUser = { name: loggedUser.displayName, email: loggedUser.email ,role: 'student'}
 
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
