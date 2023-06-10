@@ -1,5 +1,5 @@
 import { FaBook, FaHome, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 
@@ -12,7 +12,7 @@ const Dashboard = () => {
             <div className="drawer-content flex flex-col items-center justify-center">
                 {/* Page content here */}
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
+                <Outlet></Outlet>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -22,7 +22,7 @@ const Dashboard = () => {
                         isAdmin ? <>
                             <li><NavLink to={'/dashboard/home'}> <FaHome />Admin Home</NavLink></li>
                             <li><NavLink to={'/dashboard/manageitems'}><FaWallet />Manage Classes</NavLink></li>
-                            <li><NavLink to={'/dashboard/allUsers'}><FaUsers />Manage Users</NavLink></li>
+                            <li><NavLink to={'/dashboard/manageUser'}><FaUsers />Manage Users</NavLink></li>
 
 
 
@@ -43,7 +43,7 @@ const Dashboard = () => {
                             <li><NavLink to={'/dashboard/myCart'}><FaBook />Manage Bokings</NavLink></li>
                             <li><NavLink to={'/dashboard/allUsers'}><FaUsers />All Users</NavLink></li>
 
-                            
+
                         </>
                     }
 
