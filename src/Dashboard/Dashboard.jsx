@@ -5,28 +5,8 @@ import useInstractor from "../Hooks/useInstractor";
 
 
 const Dashboard = () => {
-    // const [isAdmin,setIsAdmin] = useState(false)
-    // const [isInstractor,setInstractor] = useState(false)
-
-
-    // useEffect(()=>{
-    //     fetch('http://localhost:5000/users')
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         data.forEach((user) => {
-    //             if (user.role === 'admin') {
-    //               setIsAdmin(!isAdmin);
-    //             } else if (user.role === 'instructor') {
-    //               setInstractor(!isInstractor);
-    //             } 
-    //           });
-    //     })
-    // },[])
-    
     const [isAdmin] = useAdmin()
-    console.log(isAdmin.admin)
     const [isInstractor] = useInstractor()
-    console.log(isInstractor)
 
     return (
         <div className="drawer lg:drawer-open">

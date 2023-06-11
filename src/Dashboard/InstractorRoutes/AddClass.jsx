@@ -7,7 +7,7 @@ import useClass from "../../Hooks/useClass";
 const AddClass = () => {
     const { user } = useContext(AuthContext)
     const { register, handleSubmit, } = useForm();
-    const [,refetch] = useClass()
+    const [,refetch] = useClass();
 
     const onSubmit = (data) => {
         console.log(data);

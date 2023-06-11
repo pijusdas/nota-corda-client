@@ -10,6 +10,7 @@ import ManageUsers from "./Dashboard/AdminRoutes/ManageUsers";
 import MangeClasses from "./Dashboard/AdminRoutes/MangeClasses";
 import AddClass from "./Dashboard/InstractorRoutes/AddClass";
 import MyClasses from "./Dashboard/InstractorRoutes/MyClasses";
+import SendFeedback from "./Dashboard/AdminRoutes/SendFeedback";
 
 
   const router = createBrowserRouter([
@@ -50,6 +51,10 @@ import MyClasses from "./Dashboard/InstractorRoutes/MyClasses";
             {
                 path: 'myClasses',
                 element: <MyClasses></MyClasses>
+            },
+            {
+                path: 'feedBack/:id',
+                element: <SendFeedback></SendFeedback>,
             }
         ]
     }
