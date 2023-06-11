@@ -47,11 +47,7 @@ const SendFeedback = () => {
     
     };
 
-    // const handleFeedback = (e) => {
-    //     e.preventDefault()
-    //     console.log()
-        
-    // }
+   
 
     return (
         <div className=" w-[70%]">

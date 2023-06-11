@@ -9,7 +9,7 @@ const MyClasses = () => {
     useEffect(() => {
         const loggedIntractorClass = classes.filter(clas => clas?.instractorEmail === user?.email);
         setMyclass(loggedIntractorClass)
-    }, [classes, user.email])
+    }, [classes, user?.email])
 
     console.log(myclass)
     return (

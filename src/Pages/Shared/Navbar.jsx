@@ -19,9 +19,9 @@ const Navbar = () => {
             </div>
 
             <div className=" space-x-3 font-bold">
-                <Link className=" hover:text-amber-600">home</Link>
+                <Link to={'/'} className=" hover:text-amber-600">home</Link>
                 <Link className=" hover:text-amber-600">Instractors</Link>
-                <Link className=" hover:text-amber-600">Classes</Link>
+                <Link to={'/classes'} className=" hover:text-amber-600">Classes</Link>
                 <Link to={'/dashboard'} className=" hover:text-amber-600">Dashboard </Link>
             </div>
 

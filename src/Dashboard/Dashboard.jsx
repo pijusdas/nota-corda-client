@@ -1,4 +1,4 @@
-import { FaBook, FaHome, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import {  FaHome, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin";
 import useInstractor from "../Hooks/useInstractor";
@@ -39,10 +39,9 @@ const Dashboard = () => {
 
                         </> : <>
                             <li><NavLink to={'/dashboard/home'}> <FaHome />Student Home</NavLink></li>
-                            <li><NavLink to={'/dashboard/addItem'}><FaUtensils /> Add an Item</NavLink></li>
-                            <li><NavLink to={'/dashboard/manageitems'}><FaWallet />Manage Items</NavLink></li>
-                            <li><NavLink to={'/dashboard/myCart'}><FaBook />Manage Bokings</NavLink></li>
-                            <li><NavLink to={'/dashboard/allUsers'}><FaUsers />All Users</NavLink></li>
+                            <li><NavLink to={'/dashboard/addItem'}><FaUtensils />My Selected Classes</NavLink></li>
+                            <li><NavLink to={'/dashboard/manageitems'}><FaWallet />My Enrolled Classes</NavLink></li>
+                            
 
 
                         </>

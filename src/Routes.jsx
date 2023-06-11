@@ -11,6 +11,8 @@ import MangeClasses from "./Dashboard/AdminRoutes/MangeClasses";
 import AddClass from "./Dashboard/InstractorRoutes/AddClass";
 import MyClasses from "./Dashboard/InstractorRoutes/MyClasses";
 import SendFeedback from "./Dashboard/AdminRoutes/SendFeedback";
+import PrivateRoute from "./PrivateRoutes";
+import Classes from "./Pages/Home/Classes/Classes";
 
 
   const router = createBrowserRouter([
@@ -23,18 +25,22 @@ import SendFeedback from "./Dashboard/AdminRoutes/SendFeedback";
             element: <Home/>
         },
         {
-            path:'/signUp',
+            path:'signUp',
             element: <SignUp></SignUp>
         },
         {
-            path: '/login',
+            path: 'login',
             element: <Login></Login>
+        },
+        {
+            path: '/classes',
+            element: <Classes></Classes>
         }
       ]
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute> <Dashboard></Dashboard></PrivateRoute>,
         children: [
             {
                 path: 'manageUser',
