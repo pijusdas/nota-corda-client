@@ -9,6 +9,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import ManageUsers from "./Dashboard/AdminRoutes/ManageUsers";
 import MangeClasses from "./Dashboard/AdminRoutes/MangeClasses";
 import AddClass from "./Dashboard/InstractorRoutes/AddClass";
+import MyClasses from "./Dashboard/InstractorRoutes/MyClasses";
 
 
   const router = createBrowserRouter([
@@ -45,6 +46,10 @@ import AddClass from "./Dashboard/InstractorRoutes/AddClass";
             {
                 path: 'addClass',
                 element: <AddClass></AddClass>
+            },
+            {
+                path: 'myClasses',
+                element: <MyClasses></MyClasses>
             }
         ]
     }

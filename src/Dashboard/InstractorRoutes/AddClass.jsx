@@ -1,13 +1,39 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import useClass from "../../Hooks/useClass";
 
 const AddClass = () => {
     const { user } = useContext(AuthContext)
     const { register, handleSubmit, } = useForm();
+    const [,refetch] = useClass()
 
     const onSubmit = (data) => {
         console.log(data);
+        const {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price} =data;
+
+        const classes = {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price, status: 'pending',enrolled: 0, feedback: ''}
+        fetch('http://localhost:5000/classes',{
+            method: 'POST',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(classes)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.insertedId) {
+                refetch()
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'class added successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        } )
     };
 console.log(user)
     return <div className="hero min-h-screen bg-base-200">

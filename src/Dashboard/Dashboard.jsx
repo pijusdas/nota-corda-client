@@ -53,7 +53,7 @@ const Dashboard = () => {
 
                             <li><NavLink to={'/dashboard/home'}> <FaHome />Instarctor Home</NavLink></li>
                             <li><NavLink to={'/dashboard/addClass'}><FaUtensils /> Add Class</NavLink></li>
-                            <li><NavLink to={'/dashboard/manageitems'}><FaWallet />Manage Items</NavLink></li>
+                            <li><NavLink to={'/dashboard/myClasses'}><FaWallet />My Classes</NavLink></li>
                            
 
 
