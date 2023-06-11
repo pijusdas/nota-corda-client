@@ -13,12 +13,14 @@ import MyClasses from "./Dashboard/InstractorRoutes/MyClasses";
 import SendFeedback from "./Dashboard/AdminRoutes/SendFeedback";
 import PrivateRoute from "./PrivateRoutes";
 import Classes from "./Pages/Home/Classes/Classes";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage/>,
       children: [
         {
             path: '/',
@@ -41,6 +43,7 @@ import Classes from "./Pages/Home/Classes/Classes";
     {
         path: 'dashboard',
         element: <PrivateRoute> <Dashboard></Dashboard></PrivateRoute>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: 'manageUser',
