@@ -14,6 +14,7 @@ import SendFeedback from "./Dashboard/AdminRoutes/SendFeedback";
 import PrivateRoute from "./PrivateRoutes";
 import Classes from "./Pages/Home/Classes/Classes";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import MySelectedClass from "./Dashboard/StudentRoutes/MySelectedClass";
 
 
   const router = createBrowserRouter([
@@ -64,6 +65,10 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
             {
                 path: 'feedBack/:id',
                 element: <SendFeedback></SendFeedback>,
+            },
+            {
+                path: 'selectedClass',
+                element: <MySelectedClass/>
             }
         ]
     }
