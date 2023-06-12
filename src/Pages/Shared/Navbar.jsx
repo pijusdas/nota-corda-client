@@ -13,7 +13,7 @@ const Navbar = () => {
         .catch(error => console.log(error))
     }
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white flex justify-between">
+        <div className="navbar  max-w-screen-xl bg-sky-500 text-white flex justify-between">
             <div className=''>
                 <Link className=" text-2xl font-bold"><span className="text-yellow-600">Nota</span><span className="text-red-800"> Corda</span></Link>
             </div>

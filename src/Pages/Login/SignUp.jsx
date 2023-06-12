@@ -21,7 +21,7 @@ const SignUp = () => {
 
                 userUpadteProfile(data.name, data.photoUrl)
                     .then(() => {
-                        const savedUser = { name: data.name, email: data.email, role: 'student' }
+                        const savedUser = { name: data.name, email: data.email, role: 'student',photoUrl: data.photoUrl }
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
@@ -37,7 +37,7 @@ const SignUp = () => {
                                     Swal.fire({
                                         position: 'top-end',
                                         icon: 'success',
-                                        title: 'Profile Updated successfully',
+                                        title: 'Sign Up successfully',
                                         showConfirmButton: false,
                                         timer: 1500
                                     })
