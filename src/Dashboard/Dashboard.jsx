@@ -18,40 +18,37 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 bg-[#D1A054] h-full">
+                <ul className="menu p-4 w-80 bg-sky-200 h-full">
                     {
 
                         isAdmin.admin ? <>
-                            <li><NavLink to={'/dashboard/home'}> <FaHome />Admin Home</NavLink></li>
-                            <li><NavLink to={'/dashboard/manageClasses'}><FaWallet />Manage Classes</NavLink></li>
-                            <li><NavLink to={'/dashboard/manageUser'}><FaUsers />Manage Users</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/home'}> <FaHome />Admin Home</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/manageClasses'}><FaWallet />Manage Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/manageUser'}><FaUsers />Manage Users</NavLink></li>
 
 
 
                         </> : isInstractor.instractor ? <>
 
 
-                            <li><NavLink to={'/dashboard/home'}> <FaHome />Instarctor Home</NavLink></li>
-                            <li><NavLink to={'/dashboard/addClass'}><FaUtensils /> Add Class</NavLink></li>
-                            <li><NavLink to={'/dashboard/myClasses'}><FaWallet />My Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/home'}> <FaHome />Instarctor Home</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/addClass'}><FaUtensils /> Add Class</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/myClasses'}><FaWallet />My Classes</NavLink></li>
+                           
                            
 
 
                         </> : <>
-                            <li><NavLink to={'/dashboard/home'}> <FaHome />Student Home</NavLink></li>
-                            <li><NavLink to={'/dashboard/selectedClass'}><FaUtensils />My Selected Classes</NavLink></li>
-                            <li><NavLink to={'/dashboard/manageitems'}><FaWallet />My Enrolled Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/selectedClass'}><FaUtensils />My Selected Classes</NavLink></li>
+                            <li ><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/enrolled'}><FaWallet />My Enrolled Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/paymentHistory'}><FaWallet />Payment History</NavLink></li>
                             
-
-
                         </>
                     }
 
-                    <div className="divider"></div>
-                    <li><NavLink to={'/'}><FaHome />Home</NavLink></li>
-                    <li><NavLink to={'menu'}> Menu</NavLink></li>
-                    <li><NavLink to={'/order'}>Shop</NavLink></li>
-                    <li><NavLink to={'/order'}>Contact</NavLink></li>
+                    <div className="divider "></div>
+                    <li><NavLink className="bg-sky-500 font-bold text-white" to={'/'}><FaHome />Home</NavLink></li>
+                    <li><NavLink className="bg-sky-500 font-bold text-white" to={'/classes'}> Classes</NavLink></li>
 
 
 

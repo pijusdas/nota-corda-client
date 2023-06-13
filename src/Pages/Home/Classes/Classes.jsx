@@ -3,6 +3,7 @@ import useAllClasses from "../../../Hooks/useAllClasses";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { Zoom } from "react-awesome-reveal";
 
 const Classes = () => {
     const [approvedClasses, setApprovedClass] = useState([])
@@ -62,7 +63,8 @@ const Classes = () => {
            
 
           <div className=" grid grid-cols-2 gap-10">
-          {
+            <Zoom delay  cascade damping={0.1}>
+            {
                 approvedClasses.map(clas => <div key={clas._id} className={`card w-full bg-base-100 shadow-xl ${clas?.availableSeats == 0? 'bg-red-600 text-white':''}`}>
                     <figure><img className=" h-80 w-full" src={clas?.ClassImage} alt="Shoes" /></figure>
                     <div className="card-body">
@@ -76,6 +78,7 @@ const Classes = () => {
                     </div>
                 </div>)
             }
+            </Zoom>
           </div>
 
         </div>

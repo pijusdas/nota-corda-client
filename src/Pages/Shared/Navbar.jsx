@@ -13,25 +13,25 @@ const Navbar = () => {
         .catch(error => console.log(error))
     }
     return (
-        <div className="navbar  max-w-screen-xl bg-sky-500 text-white flex justify-between">
+        <div className="navbar h-20 max-w-screen-xl bg-sky-500 text-white flex justify-between">
             <div className=''>
-                <Link className=" text-2xl font-bold"><span className="text-yellow-600">Nota</span><span className="text-red-800"> Corda</span></Link>
+                <Link className=" text-2xl font-bold"><span className="text-sky-100">Nota</span><span className="text-red-800"> Corda</span></Link>
             </div>
 
             <div className=" space-x-3 font-bold">
-                <Link to={'/'} className=" hover:text-amber-600">home</Link>
-                <Link className=" hover:text-amber-600">Instractors</Link>
-                <Link to={'/classes'} className=" hover:text-amber-600">Classes</Link>
-                <Link to={'/dashboard'} className=" hover:text-amber-600">Dashboard </Link>
+                <Link to={'/'} className=" hover:text-sky-800">home</Link>
+                <Link className=" hover:text-sky-800">Instractors</Link>
+                <Link to={'/classes'} className=" hover:text-sky-800">Classes</Link>
+                <Link to={'/dashboard'} className=" hover:text-sky-800">Dashboard </Link>
             </div>
 
             {user ? <div> <p onClick={handleLogout} className="mr-5 font-bold">Logout</p>
                 <div >
-                    <img className=" w-10 rounded-full" src={user?.photoURL}/>
+                    <img className=" h-14 w-14 rounded-full" src={user?.photoURL}/>
                 </div>
             </div> :
 
-                <Link to={'/login'} className=" font-bold hover:text-amber-600">Login </Link>
+                <Link to={'/login'} className=" font-bold hover:text-sky-800">Login </Link>
             }
 
 
