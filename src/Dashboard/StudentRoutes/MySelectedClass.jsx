@@ -43,7 +43,7 @@ const MySelectedClass = () => {
                     <p>Available seats: {clas?.availableSeats}</p>
                     <p>Enrolled : {clas?.enrolled}</p>
                     <div className="card-actions justify-self-center ">
-                        <Link state={clas?.price} to={'/dashboard/payment'}>
+                        <Link state={clas} to={'/dashboard/payment'}>
                         <button className="btn text-white  bg-green-800">Pay</button>
                         </Link>
                         <button onClick={()=> handleDelete(clas)} className="btn text-white btn-error">Delete</button>

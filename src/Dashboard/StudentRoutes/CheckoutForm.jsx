@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
-const CheckoutForm = ({price}) => {
+const CheckoutForm = ({price,clas}) => {
     const stripe = useStripe()
     const elements = useElements()
     const [cardError, setCardError] = useState('')
@@ -13,6 +13,7 @@ const CheckoutForm = ({price}) => {
     const [axiosSecure] = useAxiosSecure()
     const [proccessing,setProccessing] = useState(false)
     const [transactionId,setTransactionId] = useState('')
+    // const [selectedClasses] = useSelectedClass()
 
 
     useEffect(() => {
@@ -82,6 +83,19 @@ const CheckoutForm = ({price}) => {
           setProccessing(false)
           if(paymentIntent.status === 'succeeded'){
             setTransactionId(paymentIntent.id)
+            const payment = {
+                email: user?.email,
+                transactionId: paymentIntent.id,
+                className: clas?.className,
+                classId: clas?._id,
+                enrolledClass: clas
+            }
+            axiosSecure.post('/payments',payment)
+            .then(res=> {
+                if(res.data.isertedId){
+                    // 
+                }
+            })
           }
     }
 
