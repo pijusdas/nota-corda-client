@@ -4,15 +4,15 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
-const CheckoutForm = ({price,clas}) => {
+const CheckoutForm = ({ price, clas }) => {
     const stripe = useStripe()
     const elements = useElements()
     const [cardError, setCardError] = useState('')
     const [clientSecret, setClientSecret] = useState("");
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
-    const [proccessing,setProccessing] = useState(false)
-    const [transactionId,setTransactionId] = useState('')
+    const [proccessing, setProccessing] = useState(false)
+    const [transactionId, setTransactionId] = useState('')
     // const [selectedClasses] = useSelectedClass()
 
 
@@ -27,13 +27,15 @@ const CheckoutForm = ({price,clas}) => {
         //     console.log(data.clientSecret)
         //     setClientSecret(data.clientSecret)
         // });
+        if (price > 0) {
 
-        axiosSecure.post('/create-payment-intend', {price})
-        .then(res =>{
-            console.log(res.data.clientSecret)
-            setClientSecret(res.data.clientSecret)
-        })
-      }, [price,axiosSecure]);
+            axiosSecure.post('/create-payment-intend', { price })
+                .then(res => {
+                    console.log(res.data.clientSecret)
+                    setClientSecret(res.data.clientSecret)
+                })
+        }
+    }, [price, axiosSecure]);
 
 
     const handleSubmit = async (event) => {
@@ -58,30 +60,30 @@ const CheckoutForm = ({price,clas}) => {
         }
         else {
             setCardError('')
-            
+
         }
 
         setProccessing(true)
 
-        const {paymentIntent, error: comfirmError} = await stripe.confirmCardPayment(
+        const { paymentIntent, error: comfirmError } = await stripe.confirmCardPayment(
             clientSecret,
             {
-              payment_method: {
-                card: card,
-                billing_details: {
-                  name: user?.displayName || 'anonymous',
-                  email: user?.email || 'anonymous'
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: user?.displayName || 'anonymous',
+                        email: user?.email || 'anonymous'
+                    },
                 },
-              },
             },
-          );
+        );
 
-          if(comfirmError){
+        if (comfirmError) {
             setCardError(comfirmError)
-          }
-          console.log(paymentIntent)
-          setProccessing(false)
-          if(paymentIntent?.status === 'succeeded'){
+        }
+        console.log(paymentIntent)
+        setProccessing(false)
+        if (paymentIntent?.status === 'succeeded') {
             setTransactionId(paymentIntent.id)
             const payment = {
                 email: user?.email,
@@ -92,13 +94,13 @@ const CheckoutForm = ({price,clas}) => {
                 classesId: clas?.clasId,
                 enrolledClass: clas
             }
-            axiosSecure.post('/payments',payment)
-            .then(res=> {
-                if(res.data.isertedId){
-                    // 
-                }
-            })
-          }
+            axiosSecure.post('/payments', payment)
+                .then(res => {
+                    if (res.data.isertedId) {
+                        //
+                    }
+                })
+        }
     }
 
     return (

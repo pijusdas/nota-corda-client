@@ -19,7 +19,7 @@ const PopularClass = () => {
 
                 {
 
-                    popularClasses.slice(0, 6).map(clas => <div key={clas._id} className="card w-full bg-base-100 shadow-xl">
+                    popularClasses.slice(0, 6).map((clas,i) => <div key={i} className="card w-full bg-base-100 shadow-xl">
                         <figure><img className="h-80 w-full" src={clas?.ClassImage} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
