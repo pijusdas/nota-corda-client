@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { Zoom } from "react-awesome-reveal";
+import SectionTitle from "../../Shared/SectionTitle";
 
 const Classes = () => {
     const [approvedClasses, setApprovedClass] = useState([])
@@ -59,10 +60,10 @@ const Classes = () => {
     }
 
     return (
-        <div className=" pt-24 px-24">
+        <div className=" pt-20 px-24 mb-20">
            
-
-          <div className=" grid grid-cols-2 gap-10">
+            <SectionTitle heading={'find your class'} subHeading={'We Provide Best Classes'}></SectionTitle>
+          <div className=" grid grid-cols-2 gap-10 mt-12">
             <Zoom delay  cascade damping={0.1}>
             {
                 approvedClasses.map(clas => <div key={clas._id} className={`card w-full bg-base-100 shadow-xl ${clas?.availableSeats == 0? 'bg-red-600 text-white':''}`}>

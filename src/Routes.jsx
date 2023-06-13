@@ -18,6 +18,7 @@ import MySelectedClass from "./Dashboard/StudentRoutes/MySelectedClass";
 import Payment from "./Dashboard/StudentRoutes/Payment";
 import EnrolledClasses from "./Dashboard/StudentRoutes/EnrolledClasses";
 import PaymentHistory from "./Dashboard/StudentRoutes/PaymentHistory";
+import AllInstractor from "./Pages/Home/Instructors/Instructor";
 
 
   const router = createBrowserRouter([
@@ -41,6 +42,10 @@ import PaymentHistory from "./Dashboard/StudentRoutes/PaymentHistory";
         {
             path: '/classes',
             element: <Classes></Classes>
+        },
+        {
+            path: 'instructor',
+            element: <AllInstractor></AllInstractor>
         }
       ]
     },

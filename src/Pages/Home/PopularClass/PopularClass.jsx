@@ -21,14 +21,14 @@ const PopularClass = () => {
                 <JackInTheBox cascade >
                     {
 
-                        popularClasses.slice(0, 6).map((clas, i) => <div key={i} className="card w-full bg-base-100 shadow-xl">
+                        popularClasses.slice(0, 6).map((clas, i) => <div key={i} className="card w-full bg-base-100 shadow-xl mt-10">
                             <figure><img className="h-80 w-full" src={clas?.ClassImage} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">
+                                <h2 className="card-title font-bold">
                                     {clas?.ClassName}
                                 </h2>
-                                <p>Intructor: {clas.instractorName}</p>
-                                <p>Erolled Students: {clas.enrolled}</p>
+                                <p className=" font-bold">Instructor: {clas.instractorName}</p>
+                                <p className=" font-bold">Enrolled Students: {clas.enrolled}</p>
 
                             </div>
                         </div>)
