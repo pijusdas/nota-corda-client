@@ -17,7 +17,7 @@ const CheckoutForm = ({ price, clas }) => {
 
 
     useEffect(() => {
-        // fetch("http://localhost:5000/create-payment-intend", {
+        // fetch("https://nota-corda-server.vercel.app/create-payment-intend", {
         //   method: "POST",
         //   headers: { "Content-Type": "application/json" },
         //   body: price,

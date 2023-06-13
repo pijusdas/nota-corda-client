@@ -4,14 +4,14 @@ import Swal from "sweetalert2";
 const ManageUsers = () => {
 
     const {data: users =[], refetch}= useQuery(['users'], async()=>{
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('https://nota-corda-server.vercel.app/users')
         return res.json()
     })
 
  console.log(users)
 
     const makeAdmin = (user)=>{
-        fetch(`http://localhost:5000/users/admin/${user._id}`,{
+        fetch(`https://nota-corda-server.vercel.app/users/admin/${user._id}`,{
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -31,7 +31,7 @@ const ManageUsers = () => {
  
 
     const makeIntractor = (user)=>{
-        fetch(`http://localhost:5000/users/instractor/${user._id}`,{
+        fetch(`https://nota-corda-server.vercel.app/users/instractor/${user._id}`,{
             method: 'PATCH'
         })
         .then(res => res.json())

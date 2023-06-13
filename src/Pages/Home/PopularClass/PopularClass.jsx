@@ -15,10 +15,10 @@ const PopularClass = () => {
     }, [AllClasses])
     return (
         <div className="px-12">
-            <SectionTitle heading={'popular classes'} subHeading={'Our Popular Class '}></SectionTitle>
+            <SectionTitle heading={'popular classes'} subHeading={'Our Popular Classes '}></SectionTitle>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <JackInTheBox cascade damping={0.1}>
+                <JackInTheBox cascade >
                     {
 
                         popularClasses.slice(0, 6).map((clas, i) => <div key={i} className="card w-full bg-base-100 shadow-xl">

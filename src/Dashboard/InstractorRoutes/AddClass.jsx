@@ -14,7 +14,7 @@ const AddClass = () => {
         const {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price} =data;
 
         const classes = {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price, status: 'pending',enrolled: 0, feedback: ''}
-        fetch('http://localhost:5000/classes',{
+        fetch('https://nota-corda-server.vercel.app/classes',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'

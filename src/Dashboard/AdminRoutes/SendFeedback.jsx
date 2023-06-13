@@ -23,7 +23,7 @@ const SendFeedback = () => {
         const feedbakk = {dataa:data.feedback}
         
         console.log(feedbakk)
-        fetch(`http://localhost:5000/classes/feedback/${feedback._id}`, {
+        fetch(`https://nota-corda-server.vercel.app/classes/feedback/${feedback._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'

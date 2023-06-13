@@ -4,7 +4,7 @@ const useSelectedClass = () => {
     const { data: selectedClasses = [], refetch } = useQuery({
         queryKey: ['selectedClasses'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/selectedClasses`)
+            const res = await fetch(`https://nota-corda-server.vercel.app/selectedClasses`)
 
             return res.json()
         }

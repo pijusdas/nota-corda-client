@@ -9,7 +9,7 @@ const useClass = () => {
     const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/classes?email=${user?.email}`)
+            const res = await fetch(`https://nota-corda-server.vercel.app/classes?email=${user?.email}`)
 
             return res.json()
         }

@@ -37,7 +37,7 @@ const Classes = () => {
               })
         }
 
-        fetch('http://localhost:5000/selectedClasses',{
+        fetch('https://nota-corda-server.vercel.app/selectedClasses',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'

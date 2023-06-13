@@ -20,7 +20,7 @@ const Navbar = () => {
 
             <div className=" space-x-3 font-bold">
                 <Link to={'/'} className=" hover:text-sky-800">home</Link>
-                <Link className=" hover:text-sky-800">Instractors</Link>
+                <Link to={'/instructor'} className=" hover:text-sky-800">Instractors</Link>
                 <Link to={'/classes'} className=" hover:text-sky-800">Classes</Link>
                 <Link to={'/dashboard'} className=" hover:text-sky-800">Dashboard </Link>
             </div>
