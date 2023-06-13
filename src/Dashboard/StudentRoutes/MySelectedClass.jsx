@@ -1,9 +1,18 @@
 import Swal from "sweetalert2";
 import useSelectedClass from "../../Hooks/useSelectedClass";
 import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const MySelectedClass = () => {
-    const [selectedClasses, refetch] = useSelectedClass()
+    const [myClass,setMyClass] = useState([])
+    const {user} = useContext(AuthContext)
+    const [selectedClasses,refetch] = useSelectedClass();
+    
+    useEffect(()=>{
+        const selectClas = selectedClasses.filter(clas=> clas.studentEmail == user?.email);
+        setMyClass([...selectClas])
+    },[selectedClasses,user?.email])
 
     const handleDelete = (clas)=>{
         Swal.fire({
@@ -34,8 +43,8 @@ const MySelectedClass = () => {
           })
     }
     return (
-        <div className=" grid grid-cols-2 gap-8 mt-20 px-12">
-            {selectedClasses.map(clas => <div key={clas._id} className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className=" w-full grid grid-cols-2 gap-8 mt-20 px-12">
+            {myClass && myClass.map(clas => <div key={clas._id} className="card card-compact w-full bg-base-100 shadow-xl">
                 <figure><img className=" h-80 w-full" src={clas?.ClassImage} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{clas?.ClassName}</h2>

@@ -33,7 +33,7 @@ const CheckoutForm = ({price,clas}) => {
             console.log(res.data.clientSecret)
             setClientSecret(res.data.clientSecret)
         })
-      }, [price]);
+      }, [price,axiosSecure]);
 
 
     const handleSubmit = async (event) => {
@@ -81,13 +81,15 @@ const CheckoutForm = ({price,clas}) => {
           }
           console.log(paymentIntent)
           setProccessing(false)
-          if(paymentIntent.status === 'succeeded'){
+          if(paymentIntent?.status === 'succeeded'){
             setTransactionId(paymentIntent.id)
             const payment = {
                 email: user?.email,
                 transactionId: paymentIntent.id,
                 className: clas?.className,
-                classId: clas?._id,
+                date: new Date(),
+                ClasId: clas?._id,
+                classesId: clas?.clasId,
                 enrolledClass: clas
             }
             axiosSecure.post('/payments',payment)

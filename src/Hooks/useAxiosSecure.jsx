@@ -6,15 +6,15 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 
+const axiosSecure = axios.create({
+ baseURL: 'http://localhost:5000'
+});
  
 const useAxiosSecure = () => {
    const {logOut} = useContext(AuthContext);
 
    const navigate = useNavigate();
 
-   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
-   });
 
 
    useEffect(()=>{
