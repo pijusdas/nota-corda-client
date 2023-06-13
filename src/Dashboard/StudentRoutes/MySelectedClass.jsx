@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useSelectedClass from "../../Hooks/useSelectedClass";
+import { Link } from "react-router-dom";
 
 const MySelectedClass = () => {
     const [selectedClasses, refetch] = useSelectedClass()
@@ -42,7 +43,9 @@ const MySelectedClass = () => {
                     <p>Available seats: {clas?.availableSeats}</p>
                     <p>Enrolled : {clas?.enrolled}</p>
                     <div className="card-actions justify-self-center ">
+                        <Link state={clas?.price} to={'/dashboard/payment'}>
                         <button className="btn text-white  bg-green-800">Pay</button>
+                        </Link>
                         <button onClick={()=> handleDelete(clas)} className="btn text-white btn-error">Delete</button>
                     </div>
                 </div>

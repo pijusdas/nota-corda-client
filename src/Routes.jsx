@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoutes";
 import Classes from "./Pages/Home/Classes/Classes";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import MySelectedClass from "./Dashboard/StudentRoutes/MySelectedClass";
+import Payment from "./Dashboard/StudentRoutes/Payment";
 
 
   const router = createBrowserRouter([
@@ -69,6 +70,10 @@ import MySelectedClass from "./Dashboard/StudentRoutes/MySelectedClass";
             {
                 path: 'selectedClass',
                 element: <MySelectedClass/>
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
             }
         ]
     }
