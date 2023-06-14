@@ -23,7 +23,7 @@ const SignUp = () => {
                     .then(() => {
                         const savedUser = { name: data.name, email: data.email, role: 'student',photoUrl: data.photoUrl }
 
-                        fetch('https://nota-corda-server.vercel.app//users', {
+                        fetch('https://nota-corda-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

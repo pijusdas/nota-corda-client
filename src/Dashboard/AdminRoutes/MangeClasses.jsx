@@ -10,7 +10,7 @@ const MangeClasses = () => {
 
     const handleApproved = (clas) => {
         console.log('clikkkkedd', clas)
-        fetch(`https://nota-corda-server.vercel.app//classes/approved/${clas._id}`, {
+        fetch(`https://nota-corda-server.vercel.app/classes/approved/${clas._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -31,7 +31,7 @@ const MangeClasses = () => {
 
     const handleDeny = (clas) => {
         console.log('clikedddddddddddddddd')
-        fetch(`https://nota-corda-server.vercel.app//classes/deny/${clas._id}`, {
+        fetch(`https://nota-corda-server.vercel.app/classes/deny/${clas._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

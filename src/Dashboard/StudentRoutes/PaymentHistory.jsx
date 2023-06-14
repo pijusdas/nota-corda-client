@@ -6,7 +6,7 @@ const PaymentHistory = () => {
     const {user} = useContext(AuthContext)
     const [paymentHistory, setPaymentHistory] = useState([])
     useEffect(() => {
-        fetch(`https://nota-corda-server.vercel.app//payments/${user?.email}`)
+        fetch(`https://nota-corda-server.vercel.app/payments/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setPaymentHistory(data)

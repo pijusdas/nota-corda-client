@@ -26,7 +26,7 @@ const MySelectedClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://nota-corda-server.vercel.app//selectedClasses/${clas._id}`, {
+                fetch(`https://nota-corda-server.vercel.app/selectedClasses/${clas._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

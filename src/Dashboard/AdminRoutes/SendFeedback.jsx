@@ -13,10 +13,8 @@ const SendFeedback = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        if(AllClasses  && AllClasses.length > 0){
-            const feddback = AllClasses.find(clas => clas._id == id);
+        const feddback = AllClasses.find(clas => clas._id == id);
         setFeedBack(feddback)
-        }
     }, [AllClasses, id])
 
     console.log(feedback)
@@ -26,7 +24,7 @@ const SendFeedback = () => {
         const feedbakk = {dataa:data.feedback}
         
         console.log(feedbakk)
-        fetch(`https://nota-corda-server.vercel.app//classes/feedback/${feedback._id}`, {
+        fetch(`https://nota-corda-server.vercel.app/classes/feedback/${feedback._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'

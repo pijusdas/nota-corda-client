@@ -8,11 +8,11 @@ const PopularClass = () => {
     const [AllClasses] = useAllClasses();
 
     useEffect(() => {
-        if (AllClasses && AllClasses.length > 0) {
-            const sortedClasses = AllClasses.sort((a, b) => b.enrolled - a.enrolled);
-            setPopularClass([...sortedClasses.slice(0, 6)])
-        }
-    }, [AllClasses]);
+        const sortedClasses = AllClasses.sort((a, b) => b.enrolled - a.enrolled);
+
+        setPopularClass([...sortedClasses])
+        
+    }, [AllClasses])
 
     return (
         <div className="px-12">

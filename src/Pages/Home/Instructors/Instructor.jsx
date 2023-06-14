@@ -8,7 +8,7 @@ const AllInstractor = () => {
 
 
     useEffect(() => {
-        fetch('https://nota-corda-server.vercel.app//users')
+        fetch('https://nota-corda-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 const findIntractor = data.filter(user => user.role === 'instractor');

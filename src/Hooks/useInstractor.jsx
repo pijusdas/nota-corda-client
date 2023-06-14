@@ -8,7 +8,7 @@ const useInstractor = () => {
     const {data: isInstractor =[], isLoading: isInstractorLoadin} = useQuery({
       queryKey: ['isInstractor', user?.email],
       queryFn : async ()=>{
-          const res = await fetch(`https://nota-corda-server.vercel.app//users/instractor/${user?.email}`)
+          const res = await fetch(`https://nota-corda-server.vercel.app/users/instractor/${user?.email}`)
           return res.json()
       }
     })

@@ -7,7 +7,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const axiosSecure = axios.create({
- baseURL: 'https://nota-corda-server.vercel.app/'
+ baseURL: 'https://nota-corda-server.vercel.app'
 });
  
 const useAxiosSecure = () => {
