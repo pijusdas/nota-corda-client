@@ -8,32 +8,41 @@ import SectionTitle from "../../../Shared/SectionTitle";
 
 const content = [
     {
-        title: "Vulputate Mollis Ultricies Fermentum Parturient",
+        title: "A Life-Changing Musical Journey Igniting Passion and Excellence",
         description:
-            "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
+            "Since joining our music school, I have uncovered a world of musical brilliance. The dedicated instructors have nurtured my talent, guiding me towards excellence. The supportive community of musicians has inspired collaboration and growth. I am grateful for the unforgettable experiences and the remarkable musical journey at our esteemed music school",
         button: "Read More",
-        image: "https://i.imgur.com/ZXBtVw7.jpg",
+        image: "https://images.pexels.com/photos/3971985/pexels-photo-3971985.jpeg?auto=compress&cs=tinysrgb&w=600",
         user: "Luan Gjokaj",
         userProfile: "https://i.imgur.com/JSW6mEk.png"
     },
     {
-        title: "Tortor Dapibus Commodo Aenean Quam",
+        title: "Unleashing Creativity Finding Harmony in Our Music School",
         description:
-            "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+            "Embarking on this musical journey at our school has unleashed my artistic expression. The passionate instructors have cultivated my skills and encouraged creative exploration. The inclusive community of fellow musicians has fostered collaboration and personal growth. I am indebted to our music school for the profound impact it has had on my musicality.",
         button: "Discover",
-        image: "https://i.imgur.com/DCdBXcq.jpg",
+        image: "https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         user: "Erich Behrens",
         userProfile: "https://i.imgur.com/0Clfnu7.png"
     },
     {
-        title: "Phasellus volutpat metus",
+        title: "Empowering Artistic Growth Unforgettable Memories at Our Music School",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+            "Harmonizing passion and growth, our music school has become my artistic haven. The dedicated instructors have nurtured my love for music, pushing me to achieve new heights. The vibrant community of musicians has fostered lifelong friendships and inspiring collaborations. I am forever grateful for the transformative experience and the opportunities it has provided",
         button: "Buy now",
-        image: "https://i.imgur.com/DvmN8Hx.jpg",
+        image: "https://images.pexels.com/photos/4709822/pexels-photo-4709822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         user: "Bruno Vizovskyy",
         userProfile: "https://i.imgur.com/4KeKvtH.png"
-    }
+    },
+    {
+        title: "Inspiring Connections Building Lifelong Musical Relationships",
+        description:
+            "Embarking on this empowering musical journey at our school has been a life-changing experience. The dedicated instructors have empowered me to embrace my musical potential. The supportive community of musicians has provided encouragement and invaluable connections. I am indebted to our music school for nurturing my passion and guiding me towards musical fulfillment.",
+        button: "Buy now",
+        image: "https://images.pexels.com/photos/4090902/pexels-photo-4090902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        user: "Bruno Vizovskyy",
+        userProfile: "https://i.imgur.com/4KeKvtH.png"
+    },
 ];
 
 

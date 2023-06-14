@@ -1,7 +1,8 @@
-import {  FaHome, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import {  FaHome, FaUsers, FaUtensils ,FaBuffer, FaDatabase, FaFunnelDollar, FaCashRegister} from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin";
 import useInstractor from "../Hooks/useInstractor";
+
 
 
 const Dashboard = () => {
@@ -26,7 +27,7 @@ const Dashboard = () => {
 
                         isAdmin.admin ? <>
                             <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/home'}> <FaHome />Admin Home</NavLink></li>
-                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/manageClasses'}><FaWallet />Manage Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/manageClasses'}><FaBuffer />Manage Classes</NavLink></li>
                             <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/manageUser'}><FaUsers />Manage Users</NavLink></li>
 
 
@@ -36,22 +37,22 @@ const Dashboard = () => {
 
                             <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/home'}> <FaHome />Instarctor Home</NavLink></li>
                             <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/addClass'}><FaUtensils /> Add Class</NavLink></li>
-                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/myClasses'}><FaWallet />My Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/myClasses'}><FaBuffer />My Classes</NavLink></li>
                            
                            
 
 
                         </> : <>
-                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/selectedClass'}><FaUtensils />My Selected Classes</NavLink></li>
-                            <li ><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/enrolled'}><FaWallet />My Enrolled Classes</NavLink></li>
-                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/paymentHistory'}><FaWallet />Payment History</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/selectedClass'}><FaBuffer />My Selected Classes</NavLink></li>
+                            <li ><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/enrolled'}><FaDatabase />My Enrolled Classes</NavLink></li>
+                            <li><NavLink className="bg-sky-500 font-bold text-white" to={'/dashboard/paymentHistory'}><FaFunnelDollar />Payment History</NavLink></li>
                             
                         </>
                     }
 
                     <div className="divider "></div>
                     <li><NavLink className="bg-sky-500 font-bold text-white" to={'/'}><FaHome />Home</NavLink></li>
-                    <li><NavLink className="bg-sky-500 font-bold text-white" to={'/classes'}> Classes</NavLink></li>
+                    <li><NavLink className="bg-sky-500 font-bold text-white" to={'/classes'}> <FaCashRegister/>Classes</NavLink></li>
 
 
 

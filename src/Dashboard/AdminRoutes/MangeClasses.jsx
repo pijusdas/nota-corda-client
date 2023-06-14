@@ -70,7 +70,7 @@ const MangeClasses = () => {
                             <p>Available Seats : {clas?.availableSeats}</p>
                             <p>Price : ${clas?.price}</p>
                             <p>Status :
-                                <button className="btn btn-xs bg-sky-400">{clas?.status}</button>
+                                <p className="btn btn-sm hover:bg-sky-500 bg-sky-400">{clas?.status}</p>
                             </p>
                             <div className="card-actions mt-5">
 
@@ -79,7 +79,7 @@ const MangeClasses = () => {
                                 <button onClick={() => handleDeny(clas)} disabled={clas?.status === 'approved' || clas?.status === 'deny'} className="btn btn-sm bg-red-500">deny </button>
 
                                 <Link to={`/dashboard/feedBack/${clas._id}`}>
-                                    <button  onClick={() => handleFeedback(clas)} className="btn btn-sm bg-yellow-500">Send FeedBack </button>
+                                    <p  onClick={() => handleFeedback(clas)} className="btn btn-sm bg-yellow-500">Send FeedBack </p>
                                 </Link>
 
                             </div>

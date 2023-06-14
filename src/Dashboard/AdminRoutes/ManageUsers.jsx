@@ -51,11 +51,11 @@ const ManageUsers = () => {
     }
 
     return (
-        <div className=" w-full px-10 ">
+        <div className=" w-full px-10 mb-20">
             <SectionTitle heading={'Manage Users'}></SectionTitle>
-            <div className="overflow-x-auto rounded-2xl shadow-2xl bg-slate-300 mx-5">
+            <div className="overflow-x-auto rounded-2xl  mx-5">
                 <table className="table">
-                    <thead>
+                    <thead className=" bg-sky-500 text-white">
                         <tr>
                             <th></th>
                             <th>Name</th>
@@ -68,13 +68,13 @@ const ManageUsers = () => {
                     <tbody>
                         {
 
-                            users.map(user =>  <tr key={user._id}>
+                            users.map(user =>  <tr className=" bg-sky-300" key={user._id}>
                                 <th>1</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.role}</td>
-                                <td><button disabled={user.role ==='admin'} onClick={()=>makeAdmin(user)} className="btn btn-sm">Make Admin</button></td>
-                                <td><button disabled={user.role ==='instractor'} onClick={()=>makeIntractor(user)} className="btn btn-sm">Make Instractor</button></td>
+                                <td><button disabled={user.role ==='admin'} onClick={()=>makeAdmin(user)} className="btn btn-neutral bg-sky-700">Make Admin</button></td>
+                                <td><button disabled={user.role ==='instractor'} onClick={()=>makeIntractor(user)} className="btn btn-neutral bg-sky-700">Make Instractor</button></td>
                             </tr>)
                         }
                        
