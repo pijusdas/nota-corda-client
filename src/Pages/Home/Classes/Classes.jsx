@@ -24,9 +24,32 @@ const Classes = () => {
         console.log(user)
         const {ClassImage,ClassName,availableSeats,_id,price,enrolled} = clas 
         const selectedClass = {clasId:_id,ClassImage,ClassName,availableSeats,price,enrolled,studentEmail:user?.email}
-        if(!user){
-            console.log()
-            Swal.fire({
+        if(user){
+         
+
+
+            fetch('https://nota-corda-server.vercel.app/selectedClasses',{
+                method: 'POST',
+                headers: {
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify(selectedClass)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'class Selected successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+
+        }
+           Swal.fire({
                 title: 'Please Login to select the Class',
                 icon: 'warning',
                 showCancelButton: true,
@@ -38,27 +61,8 @@ const Classes = () => {
                  navigate('/login')
                 }
               })
-        }
 
-        fetch('https://nota-corda-server.vercel.app/selectedClasses',{
-            method: 'POST',
-            headers: {
-                'content-type':'application/json'
-            },
-            body: JSON.stringify(selectedClass)
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.insertedId) {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'class Selected successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            }
-        })
+       
     }
 
     return (
