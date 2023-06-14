@@ -13,8 +13,10 @@ const Classes = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
+       if(AllClasses && AllClasses.length > 0){
         const approvedClasses = AllClasses.filter(clas => clas.status === 'approved');
         setApprovedClass(approvedClasses)
+       }
     }, [AllClasses])
 
 
@@ -38,7 +40,7 @@ const Classes = () => {
               })
         }
 
-        fetch('https://nota-corda-server.vercel.app/selectedClasses',{
+        fetch('https://nota-corda-server.vercel.app//selectedClasses',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'

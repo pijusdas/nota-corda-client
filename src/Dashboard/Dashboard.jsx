@@ -13,12 +13,15 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 {/* Page content here */}
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <label htmlFor="my-drawer-2" className="btn btn-primary outline-none bg-sky-500 drawer-button lg:hidden hover:bg-sky-700 mt-20">Open drawer</label>
                 <Outlet></Outlet>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                
                 <ul className="menu p-4 w-80 bg-sky-200 h-full">
+                    <h1 className=" text-4xl font-bold text-center mt-4">Nota <span className=" text-red-500">Corda</span></h1>
+                    <p  className=" text-center font-bold text-lg my-5">Harmonize your musical journey </p>
                     {
 
                         isAdmin.admin ? <>

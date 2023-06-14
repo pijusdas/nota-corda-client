@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useClass from "../../Hooks/useClass";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 const AddClass = () => {
     const { user } = useContext(AuthContext)
@@ -14,7 +15,7 @@ const AddClass = () => {
         const {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price} =data;
 
         const classes = {ClassName,ClassImage,instractorName,instractorEmail,availableSeats,price, status: 'pending',enrolled: 0, feedback: ''}
-        fetch('https://nota-corda-server.vercel.app/classes',{
+        fetch('https://nota-corda-server.vercel.app//classes',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'
@@ -37,6 +38,7 @@ const AddClass = () => {
     };
 console.log(user)
     return <div className="hero min-h-screen bg-base-200">
+        <SectionTitle heading={'add Class'}/>
         <div className="hero-content w-full ">
 
             <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">

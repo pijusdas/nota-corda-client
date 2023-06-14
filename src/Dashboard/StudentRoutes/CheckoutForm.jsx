@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 
 const CheckoutForm = ({ price, clas }) => {
@@ -17,16 +18,7 @@ const CheckoutForm = ({ price, clas }) => {
 
 
     useEffect(() => {
-        // fetch("https://nota-corda-server.vercel.app/create-payment-intend", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: price,
-        // })
-        //   .then(res => res.json())
-        //   .then(data => {
-        //     console.log(data.clientSecret)
-        //     setClientSecret(data.clientSecret)
-        // });
+      
         if (price > 0) {
 
             axiosSecure.post('/create-payment-intend', { price })
@@ -105,6 +97,7 @@ const CheckoutForm = ({ price, clas }) => {
 
     return (
         <>
+        <SectionTitle heading={'Checkout Form'}></SectionTitle>
             <form className=" px-12 my-12" onSubmit={handleSubmit}>
                 <CardElement
                     options={{

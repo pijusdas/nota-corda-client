@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAllClasses from "../../Hooks/useAllClasses";
 import { Link } from "react-router-dom";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 
 const MangeClasses = () => {
@@ -9,7 +10,7 @@ const MangeClasses = () => {
 
     const handleApproved = (clas) => {
         console.log('clikkkkedd', clas)
-        fetch(`https://nota-corda-server.vercel.app/classes/approved/${clas._id}`, {
+        fetch(`https://nota-corda-server.vercel.app//classes/approved/${clas._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -30,7 +31,7 @@ const MangeClasses = () => {
 
     const handleDeny = (clas) => {
         console.log('clikedddddddddddddddd')
-        fetch(`https://nota-corda-server.vercel.app/classes/deny/${clas._id}`, {
+        fetch(`https://nota-corda-server.vercel.app//classes/deny/${clas._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -56,7 +57,7 @@ const MangeClasses = () => {
 
     return (
         <div className=" w-full px-12 mt-10">
-
+            <SectionTitle heading={'manage Classes'}/>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-7">
 
                 {

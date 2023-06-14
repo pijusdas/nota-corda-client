@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 import { useForm } from "react-hook-form";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 
 const SendFeedback = () => {
@@ -12,8 +13,10 @@ const SendFeedback = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        const feddback = AllClasses.find(clas => clas._id == id);
+        if(AllClasses  && AllClasses.length > 0){
+            const feddback = AllClasses.find(clas => clas._id == id);
         setFeedBack(feddback)
+        }
     }, [AllClasses, id])
 
     console.log(feedback)
@@ -23,7 +26,7 @@ const SendFeedback = () => {
         const feedbakk = {dataa:data.feedback}
         
         console.log(feedbakk)
-        fetch(`https://nota-corda-server.vercel.app/classes/feedback/${feedback._id}`, {
+        fetch(`https://nota-corda-server.vercel.app//classes/feedback/${feedback._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'
@@ -51,6 +54,7 @@ const SendFeedback = () => {
 
     return (
         <div className=" w-[70%]">
+            <SectionTitle heading={'FeedBack'}/>
             <form className=" flex flex-col mb-8" onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
                 <input className="textarea textarea-success" placeholder="Feedback" {...register("feedback")} />

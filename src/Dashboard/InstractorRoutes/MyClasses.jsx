@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import useClass from "../../Hooks/useClass";
 import { AuthContext } from "../../Provider/AuthProvider";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 const MyClasses = () => {
     const [myclass, setMyclass] = useState([])
@@ -13,6 +14,8 @@ const MyClasses = () => {
 
     console.log(myclass)
     return (
+       <>
+       <SectionTitle heading={'my classes'}></SectionTitle>
         <div className="overflow-x-auto shadow-2xl w-full mx-12">
             <table className="table">
                 {/* head */}
@@ -54,6 +57,7 @@ const MyClasses = () => {
                 </tbody>
             </table>
         </div>
+       </>
     );
 };
 

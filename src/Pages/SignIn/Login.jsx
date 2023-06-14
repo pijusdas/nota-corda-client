@@ -63,7 +63,7 @@ const Login = () => {
                             </div>
                            
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary bg-amber-700" type="submit" value="Login" />
+                                <input className="btn btn-primary bg-sky-700" type="submit" value="Login" />
                             </div>
                             <p>New to Nota Corda? <Link className=' text-red-600 font-bold' to={'/signUp'}>Please Sign Up</Link></p>
                         </form>

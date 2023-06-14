@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import SectionTitle from "../../Pages/Shared/SectionTitle";
 
 const PaymentHistory = () => {
     const {user} = useContext(AuthContext)
     const [paymentHistory, setPaymentHistory] = useState([])
     useEffect(() => {
-        fetch(`https://nota-corda-server.vercel.app/payments/${user?.email}`)
+        fetch(`https://nota-corda-server.vercel.app//payments/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setPaymentHistory(data)
@@ -13,6 +14,7 @@ const PaymentHistory = () => {
     }, [user?.email])
     return (
         <div className=" w-full px-12">
+            <SectionTitle heading={'Payment history'}/>
             <div className="overflow-x-auto rounded-t-2xl">
                 <table className="table table-zebra ">
                    

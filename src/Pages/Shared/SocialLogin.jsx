@@ -17,7 +17,7 @@ const SocialLogin = () => {
                 console.log(loggedUser);
                 const savedUser = { name: loggedUser.displayName, email: loggedUser.email ,role: 'student'}
 
-                fetch('https://nota-corda-server.vercel.app/users', {
+                fetch('https://nota-corda-server.vercel.app//users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
