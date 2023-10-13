@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useAllClasses from "../../../Hooks/useAllClasses";
 import SectionTitle from "../../Shared/SectionTitle";
-import { JackInTheBox } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 const PopularClass = () => {
     const [popularClasses, setPopularClass] = useState([])
@@ -19,7 +19,7 @@ const PopularClass = () => {
             <SectionTitle heading={'popular classes'} subHeading={'Our Popular Classes '}></SectionTitle>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <JackInTheBox cascade >
+                <Zoom delay>
                     {
 
                         popularClasses.slice(0, 6).map((clas, i) => <div key={i} className="card w-full bg-base-100 shadow-xl mt-10">
@@ -35,7 +35,7 @@ const PopularClass = () => {
                         </div>)
 
                     }
-                </JackInTheBox>
+                </Zoom>
 
             </div>
 

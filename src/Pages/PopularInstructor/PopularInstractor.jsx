@@ -22,12 +22,15 @@ const PopularInstractor = () => {
                 <Slide triggerOnce>
                     {
                         popularInstractor && popularInstractor.slice(0, 6).map((instrutor, i) => <div key={i} className="card w-full bg-base-100 mb-5">
-                            <div >
-                                <div className=" border-2 hover:border-8 border-sky-600 rounded-full h-64 w-64 ">
+
+                            <div className=" flex flex-col items-center justify-center">
+                                <div className=" border-2 hover:border-8 border-sky-600 rounded-full h-68 w-68 hover:animate-pulse ">
                                     <img className=" rounded-full h-64 w-64 p-4" src={instrutor?.photoUrl} alt="Shoes" />
                                 </div>
-                                <h1 className=" text-center text-2xl mt-5 font-bold text-blue-800">{instrutor?.name}</h1>
-                                <p className=" text-red-800 text-center"> {instrutor.email}</p>
+                                <div>
+                                    <h1 className=" text-center text-2xl mt-5 font-bold text-blue-800">{instrutor?.name}</h1>
+                                    <p className=" text-red-800 text-center"> {instrutor.email}</p>
+                                </div>
 
                             </div>
 

@@ -15,7 +15,7 @@ const EnrolledClasses = () => {
     return (
         <div className=" w-full my-24">
 
-        <SectionTitle heading={'My Enrolled Classes'}></SectionTitle>
+            <SectionTitle heading={'My Enrolled Classes'}></SectionTitle>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 px-12 mt-10">
                 {
                     enrolled && enrolled.map((clas, i) => <div key={i} className="card card-compact w-full bg-base-100 shadow-xl">
