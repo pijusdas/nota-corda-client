@@ -19,6 +19,7 @@ import Payment from "./Dashboard/StudentRoutes/Payment";
 import EnrolledClasses from "./Dashboard/StudentRoutes/EnrolledClasses";
 import PaymentHistory from "./Dashboard/StudentRoutes/PaymentHistory";
 import AllInstractor from "./Pages/Home/Instructors/Instructor";
+import LearnMore from "./Pages/Home/Private lesson/LearnMore";
 
 
   const router = createBrowserRouter([
@@ -46,6 +47,10 @@ import AllInstractor from "./Pages/Home/Instructors/Instructor";
         {
             path: 'instructor',
             element: <AllInstractor></AllInstractor>
+        },
+        {
+            path: 'learn',
+            element: <LearnMore/>
         }
       ]
     },

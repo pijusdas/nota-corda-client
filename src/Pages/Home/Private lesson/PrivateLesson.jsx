@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const PrivateLesson = () => {
     return (
@@ -6,7 +7,7 @@ const PrivateLesson = () => {
 
             <p className="text-white text-base font-bold font-serif">We offer music education for individuals of just <br /> about every age and skill level.</p>
 
-            <button className=" btn w-36 rounded-full bg-sky-600 text-white hover:bg-inherit ">Learn More</button>
+            <Link to={'/learn'} className=" btn w-36 rounded-full bg-sky-600 text-white hover:bg-inherit ">Learn More</Link>
         </div>
     );
 };
