@@ -1,4 +1,5 @@
 import PopularInstractor from "../../PopularInstructor/PopularInstractor";
+import OurStudents from "../PopularClass/OurStudent/OurStudent";
 import PopularClass from "../PopularClass/PopularClass";
 import PrivateLesson from "../Private lesson/PrivateLesson";
 import Banner from "./Banner/Banner";
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <PrivateLesson/>
             <PopularClass></PopularClass>
+            <OurStudents />
             <PopularInstractor></PopularInstractor>
             <OurStudent/>
         </div>
