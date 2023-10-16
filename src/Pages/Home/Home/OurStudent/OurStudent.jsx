@@ -53,7 +53,7 @@ const content = [
 const OurStudent = () => {
     return (
         <div>
-            <div className=" mb-10">
+            <div className="">
                     <SectionTitle heading={'Our Student Says'}></SectionTitle>
                     <Slider className="slider-wrapper">
                         {content.map((item, index) => (

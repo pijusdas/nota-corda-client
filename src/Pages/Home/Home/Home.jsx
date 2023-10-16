@@ -1,4 +1,5 @@
 import PopularInstractor from "../../PopularInstructor/PopularInstractor";
+import JoinUs from "../JoinUs/JoinUs";
 import OurStudents from "../PopularClass/OurStudent/OurStudent";
 import TotalStudents from "../PopularClass/OurStudent/TotalStudents";
 import PopularClass from "../PopularClass/PopularClass";
@@ -19,6 +20,7 @@ const Home = () => {
             <PopularInstractor></PopularInstractor>
             <OurMedia/>
             <OurStudent/>
+            <JoinUs/>
         </div>
     );
 };
