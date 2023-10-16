@@ -53,8 +53,7 @@ const content = [
 const OurStudent = () => {
     return (
         <div>
-           
-                <div className=" mb-10">
+            <div className=" mb-10">
                     <SectionTitle heading={'Our Student Says'}></SectionTitle>
                     <Slider className="slider-wrapper">
                         {content.map((item, index) => (
@@ -66,7 +65,7 @@ const OurStudent = () => {
                                 <div className="inner">
                                     <h1>{item.title}</h1>
                                     <p>{item.description}</p>
-                                    <button className=" bg-sky-800 text-white font-bold">{item.button}</button>
+                                    <button className=" bg-red-600 hover:bg-red-700 text-white font-bold">{item.button}</button>
                                 </div>
 
                             </div>

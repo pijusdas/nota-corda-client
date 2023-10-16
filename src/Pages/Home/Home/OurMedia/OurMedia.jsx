@@ -1,13 +1,13 @@
 
 const OurMedia = () => {
     return (
-        <div className=" flex flex-col justify-center items-center mb-14">
+        <div className=" flex flex-col justify-center items-center p-20 bg-red-50">
             <div className=" text-center">
                 <h1 className=" text-2xl text-red-700 font-extrabold font-serif">Our Media</h1>
 
                 <h1 className=" mt-3 mb-10 text-cyan-800 text-5xl font-serif font-extrabold">See what our students can do</h1>
 
-                <p className=" mb-9 text-gray-500 font-bold">Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien euismod. In id tempus metus. <br /> Donec eu volutpat nibh, in maximus ligula.</p>
+                <p className=" mb-12 text-gray-500 font-bold">Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien euismod. In id tempus metus. <br /> Donec eu volutpat nibh, in maximus ligula.</p>
             </div>
 
             <div className=" rounded-2xl">
